@@ -439,7 +439,7 @@ describe('Position', () => {
     });
   });
 
-  describe('#distanceFrom', () => {
+  describe('distanceFrom method', () => {
     it('returns distance of between positions', () => {
       const a1 = new Position('a', 1);
       expect(a1.distanceFrom(a1)).toEqual({
