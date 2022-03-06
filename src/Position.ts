@@ -17,6 +17,10 @@ export class Position {
     );
   }
 
+  static allOfRank(rank: Rank): Set<Position> {
+    return new Set(ALL_FILES.map((file) => new this(file, rank)));
+  }
+
   static allDiagonalsFrom(offset: Position): Set<Position> {
     return new Set(
       Array.from(this.all()).filter((other) => {

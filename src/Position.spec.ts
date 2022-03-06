@@ -90,6 +90,36 @@ describe('Position', () => {
     });
   });
 
+  describe('.allOfRank', () => {
+    it('returns set of positions', () => {
+      expect(Position.allOfRank(1)).toEqual(
+        new Set([
+          new Position('a', 1),
+          new Position('b', 1),
+          new Position('c', 1),
+          new Position('d', 1),
+          new Position('e', 1),
+          new Position('f', 1),
+          new Position('g', 1),
+          new Position('h', 1),
+        ]),
+      );
+
+      expect(Position.allOfRank(8)).toEqual(
+        new Set([
+          new Position('a', 8),
+          new Position('b', 8),
+          new Position('c', 8),
+          new Position('d', 8),
+          new Position('e', 8),
+          new Position('f', 8),
+          new Position('g', 8),
+          new Position('h', 8),
+        ]),
+      );
+    });
+  });
+
   describe('.allDiagonalsFrom', () => {
     it('returns set of positions', () => {
       expect(Position.allDiagonalsFrom(new Position('a', 1))).toEqual(
@@ -439,7 +469,7 @@ describe('Position', () => {
     });
   });
 
-  describe('#distanceFrom', () => {
+  describe('distanceFrom method', () => {
     it('returns distance of between positions', () => {
       const a1 = new Position('a', 1);
       expect(a1.distanceFrom(a1)).toEqual({
