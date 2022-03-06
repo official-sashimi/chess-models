@@ -6,7 +6,7 @@ describe('Rook', () => {
     const whiteRook = new Rook('White');
     const blackRook = new Rook('Black');
 
-    it('should returns an array of positions', () => {
+    it('returns an set of positions', () => {
       expect(whiteRook.movablePositionsFrom(new Position('a', 1))).toEqual(
         new Set([
           new Position('a', 2),

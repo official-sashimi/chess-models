@@ -6,7 +6,7 @@ describe('Bishop', () => {
     const whiteBishop = new Bishop('White');
     const blackBishop = new Bishop('Black');
 
-    it('should returns an array of positions', () => {
+    it('returns an set of positions', () => {
       expect(whiteBishop.movablePositionsFrom(new Position('c', 1))).toEqual(
         new Set([
           new Position('a', 3),
