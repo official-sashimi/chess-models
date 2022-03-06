@@ -6,7 +6,7 @@ describe('King', () => {
     const whiteKing = new King('White');
     const blackKing = new King('Black');
 
-    it('should returns an array of positions', () => {
+    it('returns an set of positions', () => {
       expect(whiteKing.movablePositionsFrom(new Position('e', 1))).toEqual(
         new Set([
           new Position('d', 1),
