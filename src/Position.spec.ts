@@ -91,7 +91,7 @@ describe('Position', () => {
   });
 
   describe('.allOfRank', () => {
-    it('returns set of positions', () => {
+    it('returns a set of positions', () => {
       expect(Position.allOfRank(1)).toEqual(
         new Set([
           new Position('a', 1),
@@ -121,7 +121,7 @@ describe('Position', () => {
   });
 
   describe('.allDiagonalsFrom', () => {
-    it('returns set of positions', () => {
+    it('returns a set of positions', () => {
       expect(Position.allDiagonalsFrom(new Position('a', 1))).toEqual(
         new Set([
           new Position('b', 2),
@@ -157,7 +157,7 @@ describe('Position', () => {
   describe('.allUpsFrom', () => {
     describe('from the lowest rank', () => {
       const offset = new Position('a', 1);
-      it('returns set of positions', () => {
+      it('returns a set of positions', () => {
         expect(Position.allUpsFrom(offset)).toEqual(
           new Set([
             new Position('a', 2),
@@ -174,7 +174,7 @@ describe('Position', () => {
 
     describe('from in the middle rank', () => {
       const offset = new Position('a', 4);
-      it('returns set of positions', () => {
+      it('returns a set of positions', () => {
         expect(Position.allUpsFrom(offset)).toEqual(
           new Set([
             new Position('a', 5),
@@ -197,7 +197,7 @@ describe('Position', () => {
   describe('.allUpRightsFrom', () => {
     describe('from the a1', () => {
       const offset = new Position('a', 1);
-      it('returns set of positions', () => {
+      it('returns a set of positions', () => {
         expect(Position.allUpRightsFrom(offset)).toEqual(
           new Set([
             new Position('b', 2),
@@ -214,7 +214,7 @@ describe('Position', () => {
 
     describe('from in the middle position', () => {
       const offset = new Position('e', 5);
-      it('returns set of positions', () => {
+      it('returns a set of positions', () => {
         expect(Position.allUpRightsFrom(offset)).toEqual(
           new Set([
             new Position('f', 6),
@@ -227,7 +227,7 @@ describe('Position', () => {
 
     describe('from the h8', () => {
       const offset = new Position('h', 8);
-      it('returns set of positions', () => {
+      it('returns a set of positions', () => {
         expect(Position.allUpRightsFrom(offset)).toEqual(new Set([]));
       });
     });
@@ -236,7 +236,7 @@ describe('Position', () => {
   describe('.allRightsFrom', () => {
     describe('from the smallest file', () => {
       const offset = new Position('a', 1);
-      it('returns set of positions', () => {
+      it('returns a set of positions', () => {
         expect(Position.allRightsFrom(offset)).toEqual(
           new Set([
             new Position('b', 1),
@@ -253,7 +253,7 @@ describe('Position', () => {
 
     describe('from in the middle rank', () => {
       const offset = new Position('e', 1);
-      it('returns set of positions', () => {
+      it('returns a set of positions', () => {
         expect(Position.allRightsFrom(offset)).toEqual(
           new Set([
             new Position('f', 1),
@@ -275,7 +275,7 @@ describe('Position', () => {
   describe('.allDownRightsFrom', () => {
     describe('from the a8', () => {
       const offset = new Position('a', 8);
-      it('returns set of positions', () => {
+      it('returns a set of positions', () => {
         expect(Position.allDownRightsFrom(offset)).toEqual(
           new Set([
             new Position('b', 7),
@@ -292,7 +292,7 @@ describe('Position', () => {
 
     describe('from in the middle position', () => {
       const offset = new Position('e', 5);
-      it('returns set of positions', () => {
+      it('returns a set of positions', () => {
         expect(Position.allDownRightsFrom(offset)).toEqual(
           new Set([
             new Position('f', 4),
@@ -321,7 +321,7 @@ describe('Position', () => {
 
     describe('from in the middle rank', () => {
       const offset = new Position('a', 4);
-      it('returns set of positions', () => {
+      it('returns a set of positions', () => {
         expect(Position.allDownsFrom(offset)).toEqual(
           new Set([
             new Position('a', 1),
@@ -334,7 +334,7 @@ describe('Position', () => {
 
     describe('from the highest rank', () => {
       const offset = new Position('a', 8);
-      it('returns set of positions', () => {
+      it('returns a set of positions', () => {
         expect(Position.allDownsFrom(offset)).toEqual(
           new Set([
             new Position('a', 1),
@@ -353,7 +353,7 @@ describe('Position', () => {
   describe('.allDownLeftsFrom', () => {
     describe('from the h8', () => {
       const offset = new Position('h', 8);
-      it('returns set of positions', () => {
+      it('returns a set of positions', () => {
         expect(Position.allDownLeftsFrom(offset)).toEqual(
           new Set([
             new Position('a', 1),
@@ -370,7 +370,7 @@ describe('Position', () => {
 
     describe('from in the middle position', () => {
       const offset = new Position('e', 5);
-      it('returns set of positions', () => {
+      it('returns a set of positions', () => {
         expect(Position.allDownLeftsFrom(offset)).toEqual(
           new Set([
             new Position('a', 1),
@@ -400,7 +400,7 @@ describe('Position', () => {
 
     describe('from in the middle rank', () => {
       const offset = new Position('e', 1);
-      it('returns set of positions', () => {
+      it('returns a set of positions', () => {
         expect(Position.allLeftsFrom(offset)).toEqual(
           new Set([
             new Position('a', 1),
@@ -414,7 +414,7 @@ describe('Position', () => {
 
     describe('from the biggest file', () => {
       const offset = new Position('h', 1);
-      it('returns set of positions', () => {
+      it('returns a set of positions', () => {
         expect(Position.allLeftsFrom(offset)).toEqual(
           new Set([
             new Position('a', 1),
@@ -433,7 +433,7 @@ describe('Position', () => {
   describe('.allUpLeftsFrom', () => {
     describe('from the h1', () => {
       const offset = new Position('h', 1);
-      it('returns set of positions', () => {
+      it('returns a set of positions', () => {
         expect(Position.allUpLeftsFrom(offset)).toEqual(
           new Set([
             new Position('a', 8),
@@ -450,7 +450,7 @@ describe('Position', () => {
 
     describe('from in the middle position', () => {
       const offset = new Position('e', 5);
-      it('returns set of positions', () => {
+      it('returns a set of positions', () => {
         expect(Position.allUpLeftsFrom(offset)).toEqual(
           new Set([
             new Position('b', 8),
