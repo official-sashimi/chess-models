@@ -2,8 +2,11 @@
   "name": "@official-sashimi/chess-models",
   "version": "0.1.0",
   "description": "Implementation of chess models",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
+    "build": "tsc",
+    "prepare": "npm run build",
     "test": "jest"
   },
   "keywords": [
